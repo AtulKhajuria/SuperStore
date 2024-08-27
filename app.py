@@ -41,7 +41,7 @@ def order():
     if product[4] < quantity:
         return render_template('order.html', message='Not enough stock available.')
 
-    # Update stock
+    # Update stock 
     new_stock = product[4] - quantity
     con = sqlite3.connect('superstore.db')
     cur = con.cursor()
